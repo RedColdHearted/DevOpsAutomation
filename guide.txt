@@ -1,0 +1,34 @@
+---Гайд по использованию---
+
+1)создать в папке с кодом файл .env, который необходим для переменных окружения, затем записать там следующее по примеру:
+
+#ip и порт первого сервера
+FIRST_SERVER_IP="192.168.176.128"
+FIST_SERVER_PORT="22"
+
+#ip и порт второго сервера
+SECOND_SERVER_IP="192.168.176.129"
+SECOND_SERVER_PORT="22"
+
+#имя и пароль супер пользователя (предполагается что на обоих серверах он один)
+SERVERS_SUPER_USER_NAME="admin"
+SERVERS_SUPER_USER_PASSWORD="admin"
+
+
+2) создать виртуальное окружение python (желательно версии 3.10+):
+
+python3 -m venv venv
+
+3)войти в вертуальное окружение:
+windows:
+    venv/Scripts/activate
+linux/mac:
+    source venv/bin/activate
+
+4)установить в него зависимости:
+
+pip install -r requirements.txt
+
+5)после всего, запустить главный файл:
+
+python main.py
